@@ -1,0 +1,3 @@
+test/reference/** -text
+test/golden/*.json -text
+assets/*.wav binary

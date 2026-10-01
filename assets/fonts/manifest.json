@@ -1,0 +1,12 @@
+{
+  "family": "Outfit",
+  "source": "https://fonts.gstatic.com/s/outfit/v15/QGYvz_MVcBeNP4NJtEtq.woff2",
+  "weights": [
+    400,
+    700,
+    900
+  ],
+  "sha256": "6c18d579fd87c3776be068b762cbc83fde3acb543d49eabd3ade842eb987e887",
+  "license": "OFL-1.1",
+  "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/outfit/OFL.txt"
+}

@@ -1,0 +1,106 @@
+{
+  "numpy": "2.4.6",
+  "sources": {
+    "synth.py": "7e28c0786ecfcec86d6d7430e8d4b3413ab1a6bae4b5f609abbd0df7cecba569",
+    "synth_hexagon.py": "4f76143c37947ada69841259d59830f0460843f72f399f0f7aac31a210ab1180",
+    "synth_galton.py": "392e00858fcd9666984bfd9e4c2615b914c47dc3dfbf9ebe2ef83ceaaaac91e5",
+    "synth_grow.py": "36e0099744950c8a6e6d7aae30414142efabc6616ef68c9d43ec0454f3d85bd9",
+    "synth_multiply.py": "7f93e52b83fb84a2f82d9e83224452a018a994e43f18b2a906e4fee1e298b8a0",
+    "synth_shrink.py": "b5e18f355e84a2ed533e5fdc6d761566c2c22cb91af1d93c7a03ef1b3dae0ee2",
+    "synth_strings.py": "7c8eb122c41f169e9b32ff75f28d4a6e37a5cfb52681ce7690d39fb881249a43",
+    "synth_colorwar.py": "20df55d25220e6b26f4dcea7db9fec687a9a91a901edb8af9f4de603cdf2656a",
+    "synth_race.py": "035f85600dbbb64df881dd09bb1ff1b5f17b1fd6d692d2d68d42b16b2b016ac4"
+  },
+  "fixtures": [
+    {
+      "scene": "escape",
+      "seed": 1,
+      "file": "escape-1.json"
+    },
+    {
+      "scene": "escape",
+      "seed": 10,
+      "file": "escape-10.json"
+    },
+    {
+      "scene": "hexagon",
+      "seed": 1,
+      "file": "hexagon-1.json"
+    },
+    {
+      "scene": "hexagon",
+      "seed": 14,
+      "file": "hexagon-14.json"
+    },
+    {
+      "scene": "galton",
+      "seed": 1,
+      "file": "galton-1.json"
+    },
+    {
+      "scene": "galton",
+      "seed": 281,
+      "file": "galton-281.json"
+    },
+    {
+      "scene": "grow",
+      "seed": 1,
+      "file": "grow-1.json"
+    },
+    {
+      "scene": "grow",
+      "seed": 115,
+      "file": "grow-115.json"
+    },
+    {
+      "scene": "multiply",
+      "seed": 1,
+      "file": "multiply-1.json"
+    },
+    {
+      "scene": "multiply",
+      "seed": 4,
+      "file": "multiply-4.json"
+    },
+    {
+      "scene": "shrink",
+      "seed": 1,
+      "file": "shrink-1.json"
+    },
+    {
+      "scene": "shrink",
+      "seed": 7,
+      "file": "shrink-7.json"
+    },
+    {
+      "scene": "strings",
+      "seed": 1,
+      "file": "strings-1.json"
+    },
+    {
+      "scene": "strings",
+      "seed": 4,
+      "file": "strings-4.json"
+    },
+    {
+      "scene": "colorwar",
+      "seed": 1,
+      "file": "colorwar-1.json"
+    },
+    {
+      "scene": "colorwar",
+      "seed": 166,
+      "file": "colorwar-166.json"
+    },
+    {
+      "scene": "race",
+      "seed": 1,
+      "file": "race-1.json"
+    },
+    {
+      "scene": "race",
+      "seed": 116,
+      "file": "race-116.json"
+    }
+  ]
+}

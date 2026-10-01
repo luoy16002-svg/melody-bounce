@@ -1,0 +1,49 @@
+{
+  "source": "VSCO-2 CE",
+  "license": "CC0-1.0",
+  "commit": "440300901dfe9275fd84e0b7763af1f8443ae62e",
+  "samples": [
+    {
+      "file": "Player_dyn2_rr1_012.wav",
+      "rootMidi": 45,
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Keys/Upright%20Piano/Player_dyn2_rr1_012.wav",
+      "sha256": "9accd92b779985736589d7bf25b93f1d6d508830d2f2aad3e76a481549cc1ca2",
+      "bytes": 6306106
+    },
+    {
+      "file": "Player_dyn2_rr1_018.wav",
+      "rootMidi": 57,
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Keys/Upright%20Piano/Player_dyn2_rr1_018.wav",
+      "sha256": "fb39ae501f7dde4aa3626d2e382b3709962cbe5d48b6c001ba7c911d1ffb6aeb",
+      "bytes": 5748202
+    },
+    {
+      "file": "Player_dyn2_rr1_024.wav",
+      "rootMidi": 69,
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Keys/Upright%20Piano/Player_dyn2_rr1_024.wav",
+      "sha256": "a00ae1a2b2a78c154b067a9709afc1ce2d3be9f08d9f4ad3c9c869a7db80eb75",
+      "bytes": 3204940
+    },
+    {
+      "file": "Player_dyn2_rr1_030.wav",
+      "rootMidi": 81,
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Keys/Upright%20Piano/Player_dyn2_rr1_030.wav",
+      "sha256": "4b558995c108f7f1dcede12c7e0444caa2658205fea34a314abf485dc6b7e710",
+      "bytes": 3144364
+    },
+    {
+      "file": "Player_dyn2_rr1_036.wav",
+      "rootMidi": 93,
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Keys/Upright%20Piano/Player_dyn2_rr1_036.wav",
+      "sha256": "87ef3cb2e7f234b56ca70ff323e2714bccd80d771fc6ac02dfef3405c217085c",
+      "bytes": 2254930
+    }
+  ],
+  "fallback": {
+    "file": "fallback.wav",
+    "rootMidi": 69,
+    "sha256": "b1df15ca6595e895cee8c014b357e65d554472a6db60078b4b751cced35f5bb1",
+    "source": "Player_dyn2_rr1_024.wav",
+    "processing": "First 0.65 seconds after onset; mono; 22050 Hz; 30 ms end fade."
+  }
+}
