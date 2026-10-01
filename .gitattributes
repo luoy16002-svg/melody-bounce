@@ -1,3 +1,5 @@
+* text=auto eol=lf
 test/reference/** -text
 test/golden/*.json -text
 assets/*.wav binary
+docs/*.gif binary
