@@ -39,7 +39,10 @@
     "player": "vite --config examples/player/vite.config.ts",
     "player:build": "vite build --config examples/player/vite.config.ts",
     "test:e2e": "npm run build && vitest run --config vitest.e2e.config.ts",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "site": "vite --config site/vite.config.ts",
+    "site:build": "npm run build && vite build --config site/vite.config.ts && node site/scripts/build-pages.mjs",
+    "site:preview": "vite preview --config site/vite.config.ts"
   },
   "dependencies": {
     "@remotion/bundler": "4.0.529",
@@ -54,6 +57,8 @@
   },
   "devDependencies": {
     "@eslint/js": "9.39.5",
+    "@remotion/media": "4.0.529",
+    "@remotion/web-renderer": "4.0.529",
     "@types/node": "20.19.43",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",

@@ -36,3 +36,5 @@ jobs:
       - run: npm ci
       - run: npm run test:e2e
       - run: npm run player:build
+      - run: npx tsc -p site/tsconfig.json
+      - run: npm run site:build

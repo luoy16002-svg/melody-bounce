@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Melody Bounce · Bouncing ball music video maker</title>
+  <meta name="description" content="Make a bouncing-ball music video in your browser. Every bounce plays the next note of a song. Pick a physics scene, use a classic or your own MIDI file, and download a 1080×1920 MP4. Free, no sign-up." />
+  <link rel="canonical" href="https://melodybounce.com/" />
+  <meta name="theme-color" content="#07080f" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preload" href="/fonts/Outfit-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/site.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Melody Bounce" />
+  <meta property="og:title" content="Melody Bounce · Every bounce plays the next note" />
+  <meta property="og:description" content="Physics videos where every collision plays the next note of a song. Make one in your browser and download the MP4." />
+  <meta property="og:url" content="https://melodybounce.com/" />
+  <meta property="og:image" content="https://melodybounce.com/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Melody Bounce",
+    "url": "https://melodybounce.com/",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any (modern web browser)",
+    "description": "A browser tool that turns a melody into a physics video: every bounce plays the next note. Exports 1080x1920 MP4 for TikTok, YouTube Shorts and Instagram Reels.",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+  }
+  </script>
+</head>
+<body>
+  <!--#header-->
+  <main>
+    <section class="hero">
+      <h1>Every bounce plays the next note</h1>
+      <p class="lede">Make a bouncing-ball music video in your browser. Pick a physics scene and a song, or bring your own MIDI file, then download a 1080×1920 MP4 for TikTok, Shorts or Reels. Free, no sign-up.</p>
+    </section>
+
+    <div id="app">
+      <div class="maker">
+        <div class="stage"><div class="phone"><div class="phone-wait"><span class="spinner" aria-hidden="true"></span>Loading the maker…</div></div><p class="stage-note">&nbsp;</p></div>
+        <div class="panel"><noscript><p class="notice">The maker needs JavaScript. You can still read about the <a href="/scenes/">scenes</a> and <a href="/guides/">guides</a>.</p></noscript></div>
+      </div>
+    </div>
+
+    <section class="band how">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><b>Pick a scene.</b> Nine of them, from the spinning hexagon to a 300-ball Galton board. Each one is a real physics simulation, run fresh in your browser.</li>
+        <li><b>Pick a melody.</b> Eight public-domain classics are built in. Upload a MIDI file instead and the top line of its busiest track becomes the tune.</li>
+        <li><b>Download the video.</b> Your browser draws the video frame by frame and saves an MP4 with the soundtrack baked in. Nothing is uploaded anywhere.</li>
+      </ol>
+    </section>
+
+    <section class="band">
+      <h2>The scenes</h2>
+      <!--#scene-cards-->
+    </section>
+
+    <section class="band faq">
+      <h2>Questions</h2>
+      <details open><summary>Is it free?</summary><p>Yes. There is no account and no forced watermark. A small melodybounce.com credit is on by default, and you can switch it off before you export.</p></details>
+      <details><summary>How does the ball land exactly on the notes?</summary><p>The notes follow the ball. The physics runs first and every collision gets an exact timestamp. Then the soundtrack puts the next note of the melody on each collision, down to the audio sample, so the sound never drifts from the picture. <a href="/guides/why-the-sync-never-drifts/">The longer explanation</a>.</p></details>
+      <details><summary>Can I use my own song?</summary><p>Upload a MIDI file. Melody Bounce takes the busiest track that isn't drums and keeps the highest note at each moment, which is usually the tune. If it picks the wrong part, choose another track from the list. Only use music you have the rights to, such as public-domain pieces or your own. <a href="/guides/use-your-own-midi/">Tips for MIDI files</a>.</p></details>
+      <details><summary>Can I post the videos on TikTok, YouTube or Instagram?</summary><p>Yes, the videos are yours to post. The built-in melodies are public-domain compositions played on a public-domain piano sample, so there is no licensed recording inside them. If you upload your own MIDI, the rights to that music are your responsibility.</p></details>
+      <details><summary>Which browsers can export the video?</summary><p>Recent Chrome and Edge work best, on desktop and Android. Safari and Firefox work when they support WebCodecs video encoding. If your browser can't export, the page says so and still lets you save the soundtrack as a WAV file.</p></details>
+      <details><summary>How long does an export take?</summary><p>Usually between one and three times the length of the video, depending on your computer. 60 fps takes about twice as long as 30 fps. Keep the tab open while it runs.</p></details>
+      <details><summary>What does Variation change?</summary><p>The starting conditions, such as where the ball starts and how fast it moves. The same scene, song and variation number always give exactly the same video, so a shared link gives someone else your video, frame for frame.</p></details>
+    </section>
+  </main>
+  <!--#footer-->
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

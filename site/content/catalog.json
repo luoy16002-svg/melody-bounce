@@ -1,0 +1,58 @@
+{
+  "scenes": {
+    "rings": {
+      "name": "Escape the rings",
+      "short": "22 spinning rings, one gap each",
+      "summary": "A ball bounces inside 22 spinning rings. Each ring has a gap, and the ring breaks once the ball gets through it.",
+      "seed": 19
+    },
+    "hexagon": {
+      "name": "Spinning hexagon",
+      "short": "The hexagon test, with a gap",
+      "summary": "The spinning hexagon test with a gap in one wall. The spin speeds up with every bounce.",
+      "seed": 14
+    },
+    "galton": {
+      "name": "Galton board",
+      "short": "300 balls, one bell curve",
+      "summary": "300 balls fall through 12 rows of pegs. Each bin has its own note, so you hear the bell curve fill in.",
+      "seed": 14
+    },
+    "grow": {
+      "name": "Growing ball",
+      "short": "Bigger on every bounce",
+      "summary": "The ball gets a little bigger on every bounce until it fills the circle.",
+      "seed": 14
+    },
+    "multiply": {
+      "name": "Every bounce adds a ball",
+      "short": "One ball becomes 200",
+      "summary": "Every bounce can add another ball, up to 200 of them, while a slowly widening gap lets them out.",
+      "seed": 14
+    },
+    "shrink": {
+      "name": "Shrinking ring",
+      "short": "The ring closes in",
+      "summary": "The ring gets 1.5% smaller every time it is hit, until the ball no longer fits.",
+      "seed": 14
+    },
+    "strings": {
+      "name": "100 strings",
+      "short": "Can the ring hold them?",
+      "summary": "Each hit ties a string to the ring and speeds the ball up. The ring has to hold 100 of them.",
+      "seed": 14
+    },
+    "colorwar": {
+      "name": "Color war",
+      "short": "Two balls paint the ring",
+      "summary": "Two balls paint the ring in their own colour. Whoever owns more of it after 30 seconds wins.",
+      "seed": 4
+    },
+    "race": {
+      "name": "Ball race",
+      "short": "Four balls, one exit",
+      "summary": "Four balls, one small spinning exit. First one out wins.",
+      "seed": 12
+    }
+  }
+}

@@ -8,6 +8,9 @@ synced to the bounces. This is the engine behind the
 
 <p align="center"><img src="docs/hero.gif" alt="the nine scenes" width="450"></p>
 
+**Try it in your browser at [melodybounce.com](https://melodybounce.com).** Same engine, no install: preview a scene
+with sound and download the MP4. The video is rendered on your machine and nothing is uploaded.
+
 ## Quick start
 
 You need Node 20 or newer.
@@ -68,10 +71,11 @@ Rendering uses the GPU through ANGLE on Windows and macOS, and software renderin
 `MELODY_BOUNCE_GL` (`angle`, `swangle`, `egl`, `vulkan`, ...) to override it, and `MELODY_BOUNCE_CONCURRENCY` to change
 how many frames render in parallel (default: half your cores, at most 8). Software rendering is about 25 times slower.
 
-## Live preview
+## In the browser
 
-`npm run player` (in a clone) starts a small local page that plays any scene in the browser with sound, using the same
-physics and audio code.
+[melodybounce.com](https://melodybounce.com) runs the engine in the page and exports video with
+[`@remotion/web-renderer`](https://www.remotion.dev/docs/web-renderer/). Its source is in [`site/`](site/README.md):
+`npm run site` starts it locally. `npm run player` starts a bare-bones preview page that plays any scene with sound.
 
 ## How it works
 
