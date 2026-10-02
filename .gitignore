@@ -13,3 +13,5 @@ NOTES.md
 run-codex.sh
 codex-final-message.txt
 *.log
+
+cards/dev/*.png

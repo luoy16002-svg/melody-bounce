@@ -42,7 +42,9 @@
     "prepare": "npm run build",
     "site": "vite --config site/vite.config.ts",
     "site:build": "npm run build && vite build --config site/vite.config.ts && node site/scripts/build-pages.mjs",
-    "site:preview": "vite preview --config site/vite.config.ts"
+    "site:preview": "vite preview --config site/vite.config.ts",
+    "cards": "vite --config cards/vite.config.ts",
+    "cards:build": "vite build --config cards/vite.config.ts && node cards/scripts/build-pages.mjs"
   },
   "dependencies": {
     "@remotion/bundler": "4.0.529",

@@ -383,6 +383,7 @@ write('/about/', page({
       <p class="kicker">About</p>
       <h1>About Melody Bounce</h1>
       <p class="lede">Melody Bounce makes physics videos where every collision plays the next note of a song.</p>
+      <p>The same engine also powers <a href="https://card.melodybounce.com/">singing cards</a>, where the ball bounces along a song and lands on someone's name.</p>
       <p>It started as a set of Python scripts for a YouTube channel of short physics music videos. The scripts grew into a TypeScript engine with nine scenes, a sampled piano and a test suite, released as <a href="${GITHUB}">open source on GitHub</a> under the MIT licence. This site is the browser version: the same engine, running entirely on your computer, with an export button.</p>
       <h2>What it costs</h2>
       <p>Nothing. There is no account and no paid tier. Ads from Google AdSense pay for the site, and the tool itself stays free.</p>
@@ -404,9 +405,11 @@ write('/privacy/', page({
       <p class="kicker">Privacy</p>
       <h1>Privacy</h1>
       <p class="lede">Short version: your songs and videos never leave your computer and there are no accounts. The site is paid for by ads from Google AdSense, which uses cookies.</p>
-      <p>Last updated ${today}.</p>
+      <p>Last updated ${today}. This policy covers melodybounce.com and its subdomains, including card.melodybounce.com.</p>
       <h2>Your files and videos</h2>
       <p>MIDI files you load are read in your browser. The simulation, the soundtrack and the video export all run on your device. Nothing you make is uploaded to us or anyone else.</p>
+      <h2>Singing cards</h2>
+      <p>The name, sender and message you type into a singing card are written into the card's link, after the # sign. Browsers never send that part of a link to a server, so we don't receive or store them. Anyone who has the link can open the card.</p>
       <h2>What the servers see</h2>
       <p>The site is hosted on Cloudflare Pages. Like any web host, Cloudflare processes your IP address and basic request details to deliver the pages and protect the site from abuse. See <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>.</p>
       <p>We use Cloudflare Web Analytics to count visits. It does not use cookies or fingerprinting and only reports aggregated numbers, such as page views, referring sites and countries.</p>
