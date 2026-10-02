@@ -409,7 +409,7 @@ write('/privacy/', page({
       <p>MIDI files you load are read in your browser. The simulation, the soundtrack and the video export all run on your device. Nothing you make is uploaded to us or anyone else.</p>
       <h2>What the servers see</h2>
       <p>The site is hosted on Cloudflare Pages. Like any web host, Cloudflare processes your IP address and basic request details to deliver the pages and protect the site from abuse. See <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>.</p>
-      <p>We may use Cloudflare Web Analytics to count visits. It does not use cookies or fingerprinting and only reports aggregated numbers, such as page views and countries.</p>
+      <p>We use Cloudflare Web Analytics to count visits. It does not use cookies or fingerprinting and only reports aggregated numbers, such as page views, referring sites and countries.</p>
       <h2>Video export</h2>
       <p>When you export a video, the rendering library, Remotion, sends a single anonymous count to Remotion's server: the website's address and whether the render succeeded. No personal data and none of your content is included.</p>
       <h2>Settings in your browser</h2>
