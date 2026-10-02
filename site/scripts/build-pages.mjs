@@ -8,7 +8,7 @@ import { scenes } from '../../dist/core/index.js';
 import { naturalDuration } from '../../dist/core/timing.js';
 import { createScore, timedCues } from '../../dist/core/audio/browser.js';
 import { songs, defaultSongs } from '../../dist/core/songs/index.js';
-import { page, catalog, sceneOrder, escapeHtml, SITE, GITHUB, sceneCards } from '../content/partials.mjs';
+import { page, catalog, sceneOrder, escapeHtml, SITE, GITHUB, ADSENSE, sceneCards } from '../content/partials.mjs';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const dist = join(root, 'dist');
@@ -385,7 +385,7 @@ write('/about/', page({
       <p class="lede">Melody Bounce makes physics videos where every collision plays the next note of a song.</p>
       <p>It started as a set of Python scripts for a YouTube channel of short physics music videos. The scripts grew into a TypeScript engine with nine scenes, a sampled piano and a test suite, released as <a href="${GITHUB}">open source on GitHub</a> under the MIT licence. This site is the browser version: the same engine, running entirely on your computer, with an export button.</p>
       <h2>What it costs</h2>
-      <p>Nothing. There is no account and no paid tier. The site may show ads in the future to cover its costs. The tool itself will stay free.</p>
+      <p>Nothing. There is no account and no paid tier. Ads from Google AdSense pay for the site, and the tool itself stays free.</p>
       <h2>What's inside</h2>
       <ul>
         <li>The physics and soundtrack engine from the <a href="${GITHUB}">melody-bounce</a> repository (MIT).</li>
@@ -403,7 +403,7 @@ write('/privacy/', page({
   body: `
       <p class="kicker">Privacy</p>
       <h1>Privacy</h1>
-      <p class="lede">Short version: your songs and videos never leave your computer, there are no accounts, and we don't use tracking cookies.</p>
+      <p class="lede">Short version: your songs and videos never leave your computer and there are no accounts. The site is paid for by ads from Google AdSense, which uses cookies.</p>
       <p>Last updated ${today}.</p>
       <h2>Your files and videos</h2>
       <p>MIDI files you load are read in your browser. The simulation, the soundtrack and the video export all run on your device. Nothing you make is uploaded to us or anyone else.</p>
@@ -415,7 +415,9 @@ write('/privacy/', page({
       <h2>Settings in your browser</h2>
       <p>The address bar keeps your current scene, song and variation so you can share a link, and the video player remembers your volume setting in your browser's local storage. Nothing else is stored.</p>
       <h2>Advertising</h2>
-      <p>The site does not show ads at the moment. If that changes, this page will be updated before any ads appear, including what advertising partners collect and how to opt out.</p>
+      <p>We use Google AdSense to show ads, which is how the site pays for itself. Third-party vendors, including Google, use cookies to serve ads based on your earlier visits to this site and to other websites. Google's use of advertising cookies lets it and its partners serve ads to you based on those visits.</p>
+      <p>You can turn off personalised advertising in <a href="https://adssettings.google.com">Google's Ads Settings</a>, and opt out of some other vendors' cookies at <a href="https://optout.aboutads.info">aboutads.info</a> or <a href="https://www.youronlinechoices.eu">youronlinechoices.eu</a>. Google explains how it uses data from sites that show its ads in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a>.</p>
+      <p>If you visit from the European Economic Area, the UK or Switzerland, you are asked for consent through Google's consent message before personalised ads are shown, and you can change your choice at any time from the link in that message.</p>
       <h2>Contact</h2>
       <p>Questions about privacy: <a href="${GITHUB}/issues">open an issue on GitHub</a>.</p>`,
 }));
@@ -449,7 +451,7 @@ writeFileSync(join(dist, '404.html'), page({
       <p class="lede">The address doesn't match any page here.</p>
       <p><a class="cta" href="/">Go to the maker</a></p>
       ${sceneCards()}`,
-}).replace('<link rel="canonical" href="https://melodybounce.com/404" />\n', ''));
+}).replace('<link rel="canonical" href="https://melodybounce.com/404" />\n', '').replace(`  ${ADSENSE}\n`, ''));
 
 // FAQ structured data for the maker page, taken from its own questions.
 const indexPath = join(dist, 'index.html');

@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 
 export const SITE = 'https://melodybounce.com';
 export const GITHUB = 'https://github.com/luoy16002-svg/melody-bounce';
+export const ADSENSE = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6652455294665934" crossorigin="anonymous"></script>';
 export const catalog = JSON.parse(readFileSync(new URL('./catalog.json', import.meta.url), 'utf8'));
 export const sceneOrder = ['hexagon', 'rings', 'galton', 'grow', 'multiply', 'shrink', 'strings', 'colorwar', 'race'];
 
@@ -53,6 +54,7 @@ export function page({path, title, description, body, image = '/og.png', jsonLd 
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preload" href="/fonts/Outfit-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/site.css" />
+  ${ADSENSE}
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Melody Bounce" />
   <meta property="og:title" content="${escapeHtml(title)}" />
