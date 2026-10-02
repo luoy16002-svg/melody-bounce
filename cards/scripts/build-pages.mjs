@@ -8,6 +8,7 @@ const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const dist = join(root, 'dist');
 const SITE = 'https://card.melodybounce.com';
 const today = new Date().toISOString().slice(0, 10);
+const INART = '<div class="ad-slot in-article"><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6652455294665934" data-ad-slot="1875851651"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>';
 const base = readFileSync(join(dist, 'index.html'), 'utf8');
 
 const swap = (html, marker, value) => html.replace(new RegExp(`<!--#${marker}-->[\\s\\S]*?<!--/${marker}-->`), value);
@@ -144,7 +145,8 @@ for (const p of pages) {
   let html = setMeta(base, p);
   html = swap(html, 'h1', p.h1);
   html = swap(html, 'lede', p.lede);
-  html = swap(html, 'content', p.content);
+  html = swap(html, 'content', p.content.replace('<h2>About', `${INART}
+      <h2>About`));
   mkdirSync(join(dist, p.path), {recursive: true});
   writeFileSync(join(dist, p.path, 'index.html'), html);
   urls.push(p.path);

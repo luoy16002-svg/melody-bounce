@@ -400,3 +400,8 @@ button.primary:disabled { filter: grayscale(0.7) brightness(0.7); cursor: defaul
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation-duration: 0.01ms !important; }
 }
+
+/* Ad slots: collapse when AdSense has nothing to show. */
+.ad-slot { max-width: var(--wrap); margin: 40px auto 0; }
+.ad-slot.in-article { max-width: 760px; margin: 28px auto; }
+.ad-slot ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }

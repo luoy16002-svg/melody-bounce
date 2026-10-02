@@ -13,6 +13,7 @@ import { page, catalog, sceneOrder, escapeHtml, SITE, GITHUB, ADSENSE, sceneCard
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const dist = join(root, 'dist');
 const today = new Date().toISOString().slice(0, 10);
+const INART = '<div class="ad-slot in-article"><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6652455294665934" data-ad-slot="1875851651"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>';
 const urls = ['/'];
 
 function write(path, html) {
@@ -218,6 +219,7 @@ for (const name of sceneOrder) {
           ${factBox(text.facts)}
         </div>
       </div>
+      ${INART}
       ${text.body}
       <h2>Make your own</h2>
       <p>Open <a href="${makerLink(name)}">${escapeHtml(meta.name)} in the maker</a>, pick a song or upload a MIDI file, and download the MP4. Variation ${f.seed} is the one in the preview above. The same variation number always gives the same video, so you can share a link and get identical results.</p>
@@ -357,7 +359,8 @@ for (const g of guides) {
       <p class="crumbs"><a href="/">Maker</a> / <a href="/guides/">Guides</a></p>
       <p class="kicker">Guide</p>
       <h1>${escapeHtml(g.title)}</h1>
-      ${g.body}
+      ${g.body.replace('<h2>', `${INART}
+      <h2>`)}
       <h2>More guides</h2>
       <ul>${guides.filter(o => o !== g).map(o => `<li><a href="/guides/${o.slug}/">${escapeHtml(o.title)}</a></li>`).join('')}</ul>`,
     jsonLd: [{'@context': 'https://schema.org', '@type': 'Article', headline: g.title, description: g.description, datePublished: '2026-10-02',
@@ -405,9 +408,11 @@ write('/privacy/', page({
       <p class="kicker">Privacy</p>
       <h1>Privacy</h1>
       <p class="lede">Short version: your songs and videos never leave your computer and there are no accounts. The site is paid for by ads from Google AdSense, which uses cookies.</p>
-      <p>Last updated ${today}. This policy covers melodybounce.com and its subdomains, including card.melodybounce.com.</p>
+      <p>Last updated ${today}. This policy covers melodybounce.com and its subdomains, including card.melodybounce.com and tools.melodybounce.com.</p>
       <h2>Your files and videos</h2>
       <p>MIDI files you load are read in your browser. The simulation, the soundtrack and the video export all run on your device. Nothing you make is uploaded to us or anyone else.</p>
+      <h2>Video tools</h2>
+      <p>The video tools on tools.melodybounce.com read and process your files inside your browser. Your videos are not uploaded to us or to anyone else, and we never see them.</p>
       <h2>Singing cards</h2>
       <p>The name, sender and message you type into a singing card are written into the card's link, after the # sign. Browsers never send that part of a link to a server, so we don't receive or store them. Anyone who has the link can open the card.</p>
       <h2>What the servers see</h2>

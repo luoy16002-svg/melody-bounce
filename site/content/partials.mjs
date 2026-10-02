@@ -15,14 +15,14 @@ export function header(current = '') {
   const link = (href, label) => `<a href="${href}"${current === href ? ' aria-current="page"' : ''}>${label}</a>`;
   return `<header class="top">
     <a class="brand" href="/">${logo}<span>Melody Bounce</span></a>
-    <nav>${link('/', 'Maker')}${link('/scenes/', 'Scenes')}${link('/guides/', 'Guides')}<a href="https://card.melodybounce.com/">Singing cards</a>${link('/about/', 'About')}<a href="${GITHUB}">GitHub</a></nav>
+    <nav>${link('/', 'Maker')}${link('/scenes/', 'Scenes')}${link('/guides/', 'Guides')}<a href="https://card.melodybounce.com/">Singing cards</a><a href="https://tools.melodybounce.com/">Video tools</a>${link('/about/', 'About')}<a href="${GITHUB}">GitHub</a></nav>
   </header>`;
 }
 
 export function footer() {
   return `<footer class="foot">
     <span>© 2026 Melody Bounce. Open-source engine, public-domain melodies.</span>
-    <nav><a href="/scenes/">Scenes</a><a href="/guides/">Guides</a><a href="https://card.melodybounce.com/">Singing cards</a><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="${GITHUB}">GitHub</a></nav>
+    <nav><a href="/scenes/">Scenes</a><a href="/guides/">Guides</a><a href="https://card.melodybounce.com/">Singing cards</a><a href="https://tools.melodybounce.com/">Video tools</a><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="${GITHUB}">GitHub</a></nav>
   </footer>`;
 }
 
