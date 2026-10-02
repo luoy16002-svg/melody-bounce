@@ -10,6 +10,7 @@ type Theme = {bg: string; glow: string; accent: string; name: [string, string]; 
 const THEMES: Record<OccasionId, Theme> = {
   birthday: {bg: '#2b0f44', glow: 'rgba(255,107,154,0.30)', accent: '#FFC857', name: ['#FF8FB8', '#FFD27A'], ball: '#FFE6A8', hues: [330, 45, 190, 275, 12]},
   congrats: {bg: '#0a3236', glow: 'rgba(91,231,196,0.26)', accent: '#5BE7C4', name: ['#6FF0CF', '#FFE29A'], ball: '#E9FFF8', hues: [165, 45, 200, 52, 300]},
+  halloween: {bg: '#2e1405', glow: 'rgba(255,140,40,0.28)', accent: '#FF9A3C', name: ['#FFA94D', '#C77DFF'], ball: '#FFD18A', hues: [28, 280, 95, 32, 268]},
   christmas: {bg: '#0d3322', glow: 'rgba(255,90,95,0.24)', accent: '#FF6B6B', name: ['#FF7A7A', '#FFD98E'], ball: '#FFFFFF', hues: [0, 130, 45, 355, 140]},
 };
 
@@ -72,6 +73,22 @@ function draw(ctx: CanvasRenderingContext2D, t: number, props: CardProps, tl: Ti
     b.addColorStop(0, `hsla(${theme.hues[i % theme.hues.length]}, 90%, 70%, ${0.05 + rnd(i + 5) * 0.07})`);
     b.addColorStop(1, 'rgba(0,0,0,0)');
     ctx.fillStyle = b; ctx.beginPath(); ctx.arc(x, (y + H) % H, r, 0, Math.PI * 2); ctx.fill();
+  }
+  if (props.occasion === 'halloween') {
+    // A moon and a few bats drifting across it.
+    const moon = ctx.createRadialGradient(880, 120, 0, 880, 120, 230);
+    moon.addColorStop(0, 'rgba(255,230,190,0.95)'); moon.addColorStop(0.32, 'rgba(255,214,150,0.9)'); moon.addColorStop(0.36, 'rgba(255,170,80,0.18)'); moon.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = moon; ctx.beginPath(); ctx.arc(880, 120, 230, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = 'rgba(10,6,14,0.92)';
+    for (let i = 0; i < 6; i++) {
+      const speed = 60 + rnd(i + 3) * 90, x = ((rnd(i) * W + t * speed) % (W + 200)) - 100;
+      const y = 120 + rnd(i + 9) * 520 + Math.sin(t * 2 + i) * 30, s = 0.6 + rnd(i + 17) * 0.8, flap = Math.sin(t * 14 + i * 2);
+      ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+      ctx.beginPath(); ctx.moveTo(0, 0);
+      ctx.quadraticCurveTo(-20, -18 * flap - 6, -46, -10 * flap); ctx.quadraticCurveTo(-30, 2, -22, 8); ctx.quadraticCurveTo(-10, 4, 0, 10);
+      ctx.quadraticCurveTo(10, 4, 22, 8); ctx.quadraticCurveTo(30, 2, 46, -10 * flap); ctx.quadraticCurveTo(20, -18 * flap - 6, 0, 0);
+      ctx.fill(); ctx.restore();
+    }
   }
   if (props.occasion === 'christmas') {
     ctx.fillStyle = 'rgba(255,255,255,0.55)';

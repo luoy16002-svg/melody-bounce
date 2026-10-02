@@ -23,6 +23,7 @@ const faq = items => `<section class="band faq"><h2>Questions</h2>${items.map(([
 const others = path => `<section class="band"><h2>Other cards</h2><div class="cards">${[
   ['/birthday/', 'Birthday', 'Happy Birthday, with their name in the third line.'],
   ['/congratulations/', 'Congratulations', 'For a new job, a graduation or a retirement.'],
+  ['/halloween/', 'Halloween', 'Spooky new words to the Mountain King, ending on their name.'],
   ['/christmas/', 'Christmas', 'We Wish You a Merry Christmas, with their name on top.'],
 ].filter(([p]) => p !== path).map(([p, t, d]) => `<a class="card" href="${p}"><span><b>${t}</b><span>${d}</span></span></a>`).join('')}</div></section>`;
 
@@ -80,6 +81,33 @@ const pages = [
       ['Why "jolly good fellow" for a woman?', 'The song has been sung for everyone for a long time, and on this card their name replaces "he", so it reads "For Anna\'s a jolly good fellow".'],
       ['Can several people sign it?', 'Put everyone in the From field, like "Mia, Tom and Sam" or "The whole team". It shows under their name at the end.'],
       ['Is the name stored?', 'No. Everything is in the link after the # sign, which browsers do not send to servers.'],
+    ])}`,
+  },
+  {
+    path: '/halloween/',
+    title: 'Halloween singing card with their name · Spooky musical e-card',
+    description: "A free Halloween card that sings: spooky new words to Grieg's In the Hall of the Mountain King, a moon full of bats, and their name on the very last note. Send the link or download the video.",
+    h1: 'A Halloween card that sings their name',
+    lede: "Bats cross the moon while a ball creeps through Grieg's In the Hall of the Mountain King, with new spooky words, and lands on their name on the very last note. Send it as a link or save the video.",
+    content: `
+    <section class="band article">
+      <h2>The words</h2>
+      <p>Something's creeping up the stairs, / trick or treat, who goes there? / Ghosts and goblins, bats and black cats, / Halloween, dear… their name. The tune creeps upward the way the original does, so the name arrives on the longest, highest note, right before the confetti.</p>
+      <h2>About the tune</h2>
+      <p>In the Hall of the Mountain King was written by Edvard Grieg in 1875 for Henrik Ibsen's play Peer Gynt, where the hero sneaks into the hall of the troll king. Its creeping, repeating melody has been the soundtrack of choice for anything sinister or sneaky ever since, from cartoons to film trailers. Grieg died in 1907 and the music is in the public domain; the Halloween words are new and written for this card.</p>
+      <h2>Ideas</h2>
+      <ul>
+        <li><b>For kids.</b> Put their name in and play it before trick-or-treating. The bats and the creeping tune do the rest.</li>
+        <li><b>For the group chat.</b> Make one for the friend who goes all out for Halloween every year.</li>
+        <li><b>For a party invite.</b> Write the time and place in the message, it appears under their name at the end.</li>
+      </ul>
+    </section>
+    ${others('/halloween/')}
+    ${faq([
+      ['Is it free?', 'Yes. No account and no watermark on the card. Ads on the site pay for it.'],
+      ['Is it too scary for small children?', 'Not really. It has a moon, a few cartoon bats and a cheeky tune, with confetti at the end.'],
+      ['Can I post it on TikTok or Instagram?', 'Yes. Download the video, it is a vertical 1080×1920 MP4 with the music included.'],
+      ['Is the name stored?', 'No. It lives in the link after the # sign, which browsers never send to a server.'],
     ])}`,
   },
   {

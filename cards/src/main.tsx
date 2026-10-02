@@ -8,7 +8,7 @@ import type { AudioRequest, AudioResponse } from './audio-worker.js';
 
 const FPS = 30;
 const SITE = 'https://card.melodybounce.com';
-const PATHS: Record<string, OccasionId> = {'/birthday/': 'birthday', '/congratulations/': 'congrats', '/christmas/': 'christmas'};
+const PATHS: Record<string, OccasionId> = {'/birthday/': 'birthday', '/congratulations/': 'congrats', '/halloween/': 'halloween', '/christmas/': 'christmas'};
 
 type Card = {occasion: OccasionId; to: string; from: string; message: string};
 

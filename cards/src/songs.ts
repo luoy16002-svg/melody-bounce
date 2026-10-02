@@ -2,9 +2,9 @@
 // syllables; {name} is replaced by the recipient's name. The melody lists one note per syllable as PITCH:BEATS;
 // a leading "~" keeps the previous syllable (a note sung on the same syllable).
 
-export type OccasionId = 'birthday' | 'congrats' | 'christmas';
+export type OccasionId = 'birthday' | 'congrats' | 'halloween' | 'christmas';
 
-type ChordName = 'C' | 'C7' | 'D' | 'D7' | 'E7' | 'Em' | 'F' | 'G' | 'G7' | 'A7' | 'Am' | 'B7';
+type ChordName = 'C' | 'C7' | 'D' | 'D7' | 'E7' | 'Em' | 'F' | 'G' | 'G7' | 'A7' | 'Am' | 'B7' | 'Bm' | 'C#7';
 
 type SongDef = {
   id: OccasionId;
@@ -36,6 +36,14 @@ const SONGS: Record<OccasionId, SongDef> = {
       'A4:.5 B4:1 B4:.5 B4:.5 A4:.5 B4:.5 C5:1.5 E5:1 E5:.5 D5:.5 E5:.5 D5:.5 C5:.5 ~B4:.5 A4:.5 G4:2.5',
     chords: [[1, 'G'], [6, 'C'], [7, 'G'], [9, 'D7'], [14, 'G'], [17, 'G'], [22, 'C'], [25, 'G'], [28, 'D7'], [31, 'G']],
   },
+  halloween: {
+    // New words to Grieg's In the Hall of the Mountain King (1875), the name lands on the last long note.
+    id: 'halloween', song: 'In the Hall of the Mountain King', bpm: 104, pulse: 1,
+    lyrics: "Some-thing's creep-ing up the stairs, / trick or treat, who goes there? / Ghosts and gob-lins, bats and black cats, / Hal-low-een, dear {name}!",
+    melody: 'B3:.5 C#4:.5 D4:.5 E4:.5 F#4:.5 D4:.5 F#4:1 F4:.5 C#4:.5 F4:1 E4:.5 C4:.5 E4:1 ' +
+      'B3:.5 C#4:.5 D4:.5 E4:.5 F#4:.5 D4:.5 F#4:.5 B4:.5 A4:.5 F#4:.5 D4:.5 F#4:.5 A4:2',
+    chords: [[0, 'Bm'], [7, 'C#7'], [10, 'C'], [13, 'Bm'], [21, 'D'], [25, 'Bm']],
+  },
   christmas: {
     id: 'christmas', song: 'We Wish You a Merry Christmas', bpm: 132, pulse: 1, transpose: 5,
     lyrics: 'We wish you a mer-ry Christ-mas, / we wish you a mer-ry Christ-mas, / we wish you a mer-ry Christ-mas / and a hap-py New Year!',
@@ -48,7 +56,7 @@ const SONGS: Record<OccasionId, SongDef> = {
 const CHORD_TONES: Record<ChordName, number[]> = {
   C: [48, 55, 60, 64], C7: [48, 58, 60, 64], D: [50, 57, 62, 66], D7: [50, 60, 62, 66], E7: [52, 56, 62, 64],
   Em: [52, 59, 64, 67], F: [53, 57, 60, 65], G: [43, 55, 59, 62], G7: [43, 53, 59, 62], A7: [45, 55, 61, 64],
-  Am: [45, 57, 60, 64], B7: [47, 54, 57, 63],
+  Am: [45, 57, 60, 64], B7: [47, 54, 57, 63], Bm: [47, 54, 59, 62], 'C#7': [49, 56, 59, 65],
 };
 
 const PITCH = /^([A-G])(#|b)?(-?\d)$/;
@@ -123,6 +131,7 @@ export function buildTimeline(occasion: OccasionId, rawName: string): Timeline {
 export const OCCASIONS: Record<OccasionId, {label: string; title: string; song: string; blurb: string}> = {
   birthday: {label: 'Birthday', title: 'Happy Birthday', song: SONGS.birthday.song, blurb: 'The birthday song, with their name in the third line.'},
   congrats: {label: 'Congratulations', title: 'Congratulations', song: SONGS.congrats.song, blurb: 'For a new job, a graduation, a retirement or any big win.'},
+  halloween: {label: 'Halloween', title: 'Happy Halloween', song: 'Mountain King, with spooky new words', blurb: "Grieg's creepiest tune, with their name on the very last note."},
   christmas: {label: 'Christmas', title: 'Merry Christmas', song: SONGS.christmas.song, blurb: 'The carol everyone knows, sung to them by name.'},
 };
 export const OCCASION_IDS = Object.keys(OCCASIONS) as OccasionId[];

@@ -1,7 +1,7 @@
 /* Singing cards: additions to the shared Melody Bounce styles. */
 .brand small { font-weight: 600; color: var(--amber); margin-left: 4px; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; }
 
-.occasions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.occasions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .occasion {
   display: flex;
   flex-direction: column;
@@ -20,6 +20,7 @@
 .occasion.birthday { --tone: #ff8fb8; }
 .occasion.congrats { --tone: #5be7c4; }
 .occasion.christmas { --tone: #ff6b6b; }
+.occasion.halloween { --tone: #ff9a3c; }
 .occasion b { font-size: 17px; }
 .occasion span { font-size: 13px; color: var(--dim); line-height: 1.3; }
 .occasion:hover { border-color: var(--line-2); transform: translateY(-1px); }
@@ -94,8 +95,10 @@ button.open:disabled { animation: none; filter: grayscale(0.6) brightness(0.8); 
 @keyframes breathe { 50% { transform: scale(1.05); } }
 .envelope .cta { margin: 0; }
 
-@media (max-width: 860px) {
+@media (max-width: 520px) {
   .occasions { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
   .fields { grid-template-columns: 1fr; }
 }
 .envelope-icon { width: 76px; height: 57px; color: #eef0ff; margin-bottom: 4px; animation: float 3s ease-in-out infinite; }
